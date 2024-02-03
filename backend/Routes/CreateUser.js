@@ -1,10 +1,10 @@
 const express = require('express');
+const router = express.Router()
 const {body, validationResult} = require('express-validator')
 
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 const jwtSecret = "ThisPasswordIsEndToEndEncryptedWithJWT"
-const router = express.Router()
 
 const User = require("../models/User")
 router.post("/createuser",[
