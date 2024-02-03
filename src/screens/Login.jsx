@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Login = () => {
 
@@ -21,9 +23,11 @@ const Login = () => {
             alert("Enter Valid Credentials");
         }
         if(json.success){
-            navigate("/");
             localStorage.setItem("authToken" , json.authToken);
+            localStorage.setItem("userEmail" , credentials.email);
             console.log(localStorage.getItem("authToken"));
+            console.log(localStorage.getItem("userEmail"));
+            navigate("/");
         }
     }
 
@@ -33,6 +37,7 @@ const Login = () => {
 
     return (
         <>
+        <Navbar />
         <div className="container">
             <form onSubmit={handleSubmit}>
                 
@@ -50,6 +55,8 @@ const Login = () => {
                 <Link to="/createuser" className="m-3 btn btn-danger">New User</Link>
             </form>
         </div>
+
+        <Footer />
         </>
     );
 };
