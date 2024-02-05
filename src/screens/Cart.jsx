@@ -1,5 +1,5 @@
 import React from 'react'
-import Delete from '@material-ui/icons/Delete';
+import { FaTrash } from 'react-icons/fa';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
 export default function Cart() {
   let data = useCart();
@@ -35,6 +35,7 @@ export default function Cart() {
     console.log("JSON RESPONSE:::::", response.status)
     if (response.status === 200) {
       dispatch({ type: "DROP" })
+      alert("Order Executed....")
     }
   }
 
@@ -43,9 +44,9 @@ export default function Cart() {
     <div>
 
       {console.log(data)}
-      <div className='container m-auto mt-5 table-responsive  table-responsive-sm table-responsive-md' >
-        <table className='table table-hover '>
-          <thead className=' text-success fs-4'>
+      <div className='container m-auto mt-5 table-responsive table-responsive-sm table-responsive-md' >
+        <table className='table table-info'>
+          <thead className='fs-4'>
             <tr>
               <th scope='col' >#</th>
               <th scope='col' >Name</th>
@@ -63,13 +64,13 @@ export default function Cart() {
                 <td>{food.quantity}</td>
                 <td>{food.size}</td>
                 <td>{food.price}</td>
-                <td ><button type="button" className="btn p-0"><Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button> </td></tr>
+                <td ><button type="button" className="btn p-0"><FaTrash onClick={() => { dispatch({ type: "REMOVE", index: index }) }} /></button> </td></tr>
             ))}
           </tbody>
         </table>
-        <div><h1 className='fs-2'>Total Price: {totalPrice}/-</h1></div>
+        <div><h1 className='fs-2'>Total Price:  {totalPrice}/-</h1></div>
         <div>
-          <button className='btn bg-success mt-5 ' onClick={handleCheckOut} > Check Out </button>
+          <button className='btn bg-info mt-5' onClick={handleCheckOut} > Check Out </button>
         </div>
       </div>
 

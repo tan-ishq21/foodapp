@@ -22,7 +22,7 @@ router.post('/orderData', async (req, res) => {
             })
         } catch (error) {
             console.log(error.message)
-            res.send("Server Error", error.message)
+            res.status(500).send("Server Error: " + error.message);
 
         }
     }
@@ -35,7 +35,8 @@ router.post('/orderData', async (req, res) => {
                 })
         } catch (error) {
             console.log(error.message)
-            res.send("Server Error", error.message)
+            res.status(500).send("Server Error: " + error.message);
+
         }
     }
 })
@@ -46,7 +47,7 @@ router.post('/myorderData', async (req, res) => {
         res.json({orderData: myData})
     } catch (error) {
         console.log(error.message)
-        res.send("Server Error", error.message)
+        res.status(500).send("Server Error: " + error.message);
     }
 })
 

@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg bg-success">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="#">Flavor Wheels</Link>
+                <Link className="navbar-brand" to="/">Flavor Wheels</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
