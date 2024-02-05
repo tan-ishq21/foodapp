@@ -39,10 +39,13 @@ const Home = () => {
             </div>
             </div>
             <div className="carousel-item active">
-            <img className="d-block w-100" src="https://www.shutterstock.com/blog/wp-content/uploads/sites/5/2019/05/Cover-Image.jpg" style={{filter: "brightness(30%)"}} alt="First slide"/>
+            <img className="d-block w-100" src="https://img.freepik.com/free-photo/fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai_188544-13382.jpg?w=1060&t=st=1707121702~exp=1707122302~hmac=2ed2f3182677d1f656e209a5d9cf07788cb1be518485f55b0ccaa0fcf0159231" style={{  width: "100%" , height:"100%" , filter: "brightness(80%)"}} alt="First slide"/>
             </div>
             <div className="carousel-item">
-            <img className="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).webp" style={{filter: "brightness(30%)"}} alt="Second slide"/>
+            <img className="d-block w-100" src="https://img.freepik.com/free-photo/front-view-beer-snacks-with-lemon-wedges-stand-with-glass-beer_141793-17468.jpg?w=900&t=st=1707121921~exp=1707122521~hmac=1f87cb5cce7aa767f7b680c6ac6ec4e199925c61cf9aa20c10f9da477631ed5a" style={{filter: "brightness(80%)"}} alt="Second slide"/>
+            </div>
+            <div className="carousel-item">
+            <img className="d-block w-100" src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style={{filter: "brightness(80%)"}} alt="Second slide"/>
             </div>
         </div>
         <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
