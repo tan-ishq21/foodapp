@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-const mongoURI = 'mongodb+srv://foodwheels:sumit@cluster0.sywzdnp.mongodb.net/foodwheels?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI;
 
 const mongoDB = async () => {
     try {
