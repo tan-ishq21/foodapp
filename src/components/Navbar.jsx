@@ -14,13 +14,13 @@ const Navbar = () => {
     }
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-success">
+            <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
                 <Link className="navbar-brand" to="/">Flavor Wheels</Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto">
                     <li className='nav-item'>
                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>

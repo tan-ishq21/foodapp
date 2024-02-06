@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useCart, useDispatchCart } from "./ContextReducer";
+import "./cards.css"
 
 const Card = (props) => {
     let dispatch = useDispatchCart();
@@ -37,27 +38,35 @@ const Card = (props) => {
     },[])
     return (
         <>
-            <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px" }}>
+            <div className="card mt-3" style={{ width: "18rem", maxHeight: "360px"}}>
                 <img src={props.foodItem.img} className="card-img-top" alt="..." style={{height:"150px" , objectFit:"fill"}} />
                 <div className="card-body">
                     <h5 className="card-title">{props.foodItem.name}</h5>
                     <div className="container w-100">
-                        <select className="m-2 h-100 bg-success" onChange={(e) => setQuantity(e.target.value)}>
-                            {
-                                Array.from(Array(6), (e, i) => {
-                                    return (
-                                        <option key={i + 1} value={i + 1}> {i + 1} </option>
-                                    )
-                                })
-                            }
-                        </select>
-                        <select className="m-2 h-100 bg-success" ref={priceRef} onChange={(e) => setSize(e.target.value)}>
-                            {
-                                priceOptions.map((data) => {
-                                    return <option key={data} value={data} >{data}</option>
-                                })
-                            }
-                        </select>
+                        {/* <div className="row"> */}
+                            {/* <div className="col-12 col-md-6"> */}
+                                <select className="m-2 h-100 bg-success" onChange={(e) => setQuantity(e.target.value)}>
+                                    {
+                                        Array.from(Array(6), (e, i) => {
+                                            return (
+                                                <option key={i + 1} value={i + 1}> {i + 1} </option>
+                                            )
+                                        })
+                                    }
+                                </select>
+                            {/* </div> */}
+                            {/* <div className="col-12 col-md-6"> */}
+                                <select className="m-2 h-100 bg-success" ref={priceRef} onChange={(e) => setSize(e.target.value)}>
+                                    {
+                                        priceOptions.map((data) => {
+                                            return <option key={data} value={data} >{data}</option>
+                                        })
+                                    }
+                                </select>
+                            {/* </div> */}
+                        {/* </div> */}
+                        
+                        
                         <div className="d-inline h-100">
                         ₹{finalPrice}/-
                         </div>
